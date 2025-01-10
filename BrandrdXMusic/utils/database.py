@@ -2,7 +2,7 @@ import random
 from typing import Dict, List, Union
 
 from BrandrdXMusic import userbot
-from BrandrdXMusic.core.mongo import mongodb, pymongodb
+from BrandrdXMusic.core.mongo import mongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
