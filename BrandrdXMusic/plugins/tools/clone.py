@@ -10,11 +10,13 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     AccessTokenExpired,
     AccessTokenInvalid,
 )
-from RISHUMUSIC.utils.database import get_assistant
+
+
+from BrandrdXMusic.utils.database import get_assistant
 from config import API_ID, API_HASH
-from RISHUMUSIC import app
-from RISHUMUSIC.misc import SUDOERS
-from RISHUMUSIC.utils.database import get_assistant, clonebotdb
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import SUDOERS
+from BrandrdXMusic.utils.database import get_assistant, clonebotdb
 from config import LOGGER_ID
 
 CLONES = set()
