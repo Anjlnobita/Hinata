@@ -39,7 +39,6 @@ async def request_token(client, callback_query: CallbackQuery):
 
 @app.on_message(filters.text & filters.private)
 async def receive_token(client, message):
-    if re.match(r"\d{9}:[A-Za-z0-9_-]{35}", message.text):
         bot_token = message.text.strip()
         mi = await message.reply_text("Processing the bot token, please wait...")
         try:
