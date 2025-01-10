@@ -12,7 +12,7 @@ from BrandrdXMusic.plugins import ALL_MODULES
 from BrandrdXMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
-from RISHUMUSIC.plugins.tools.clone import restart_bots
+from BrandrdXMusic.plugins.tools.clone import restart_bots
 
 
 async def init():
