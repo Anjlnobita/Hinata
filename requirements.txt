@@ -25,7 +25,7 @@ pyyaml==6.0.2
 tgcrypto
 telegraph==2.2.0
 yt-dlp
-lexica-api==1.4.7
+lexica-api==1.6.0
 httpx==0.28.1
 lyricsgenius
 spotipy
