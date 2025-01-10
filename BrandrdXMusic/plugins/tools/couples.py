@@ -8,14 +8,14 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from BrandrdXMusic import app as app
-from BrandrdXMusic.mongo.couples_db import _get_image, get_couple
+from RishuMusic import app as app
+from RishuMusic.mongo.couples_db import _get_image, get_couple
 
 POLICE = [
     [
         InlineKeyboardButton(
-            text="ᴍʏ ᴄᴜᴛᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ  🥀",
-            url=f"https://t.me/BRANDED_PAID_CC",
+            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
+            url=f"https://t.me/Hinata_hyuga_bbot?start=_tgr_uvFMVsoxNjll",
         ),
     ],
 ]
@@ -26,7 +26,7 @@ def dt():
     dt_string = now.strftime("%d/%m/%Y %H:%M")
     dt_list = dt_string.split(" ")
     return dt_list
-    
+
 
 def dt_tom():
     a = (
@@ -45,11 +45,11 @@ today = str(dt()[0])
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply_text("ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
+        return await message.reply_text("✦ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
+         msg = await message.reply_text("💞")
          #GET LIST OF USERS
          list_of_users = []
 
@@ -65,26 +65,26 @@ async def ctest(_, message):
 
          photo1 = (await app.get_chat(c1_id)).photo
          photo2 = (await app.get_chat(c2_id)).photo
- 
+
          N1 = (await app.get_users(c1_id)).mention 
          N2 = (await app.get_users(c2_id)).mention
-         
+
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "BrandrdXMusic/assets/upic.png"
+            p1 = "RishuMusic/assets/upic.png"
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "BrandrdXMusic/assets/upic.png"
-            
+            p2 = "RishuMusic/assets/upic.png"
+
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("BrandrdXMusic/assets/cppicbranded.jpg")
+         img = Image.open("RishuMusic/assets/cppic.png")
 
-         img1 = img1.resize((437,437))
-         img2 = img2.resize((437,437))
+         img1 = img1.resize((390, 390))
+         img2 = img2.resize((390,390))
 
          mask = Image.new('L', img1.size, 0)
          draw = ImageDraw.Draw(mask) 
@@ -100,19 +100,22 @@ async def ctest(_, message):
 
          draw = ImageDraw.Draw(img)
 
-         img.paste(img1, (116, 160), img1)
-         img.paste(img2, (789, 160), img2)
+         img.paste(img1, (91, 215), img1)
+         img.paste(img2, (805, 215), img2)
 
          img.save(f'test_{cid}.png')
-    
+
          TXT = f"""
-**ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
+**ㅤ◦•●◉✿ ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ  ✿◉●•◦
+▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭
 
-{N1} + {N2} = 💚
+ {N1} + {N2} = ♥︎
 
-ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
+❖ ɴᴇxᴛ ᴄᴏᴜᴘʟᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ 
+❖ ᴅᴀᴛᴇ -`{tomorrow}`
+▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭**
 """
-    
+
          await message.reply_photo(f"test_{cid}.png", caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE),
     )
          await msg.delete()
@@ -120,26 +123,7 @@ async def ctest(_, message):
          for x in a:
            img = "https://graph.org/" + x
            couple = {"c1_id": c1_id, "c2_id": c2_id}
-          # await save_couple(cid, today, couple, img)
-    
-         
-      # elif is_selected:
-      #   msg = await message.reply_text("𝐆ᴇᴛᴛɪɴɢ 𝐓ᴏᴅᴀʏs 𝐂ᴏᴜᴘʟᴇs 𝐈ᴍᴀɢᴇ...")
-      #   b = await _get_image(cid)
-       #  c1_id = int(is_selected["c1_id"])
-       #  c2_id = int(is_selected["c2_id"])
-       #  c1_name = (await app.get_users(c1_id)).first_name
-        # c2_name = (await app.get_users(c2_id)).first_name
-         
-      #   TXT = f"""
-#**ᴛᴏᴅᴀʏ's sᴇʟᴇᴄᴛᴇᴅ ᴄᴏᴜᴘʟᴇs 🎉 :
-#➖➖➖➖➖➖➖➖➖➖➖➖
-#[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
-#➖➖➖➖➖➖➖➖➖➖➖➖
-#ɴᴇxᴛ ᴄᴏᴜᴘʟᴇꜱ ᴡɪʟʟ ʙᴇ ꜱᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
-#"""
- #        await message.reply_photo(b, caption=TXT)
-        # await msg.delete()
+
     except Exception as e:
         print(str(e))
     try:
@@ -148,20 +132,12 @@ async def ctest(_, message):
       os.remove(f"test_{cid}.png")
     except Exception:
        pass
-         
 
-__mod__ = "COUPLES"
+
+__mod__ = "ᴄᴏᴜᴘʟᴇ"
 __help__ = """
-**» /couples** - Get Todays Couples Of The Group In Interactive View
+**✦ /couples** - Get Todays Couples Of The Group In Interactive View
 """
 
 
 
-
-
-    
-
-
-
-
-    
