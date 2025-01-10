@@ -13,7 +13,6 @@ LOGGER(__name__).info("Connecting to your Mongo Database...")
 try:
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URI)
     mongodb = _mongo_async_.Anon
-    pymongodb = _mongo_sync_.nobi
 
     LOGGER(__name__).info("Connected to your Mongo Database.")
 except:
