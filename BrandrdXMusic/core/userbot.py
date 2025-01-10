@@ -101,10 +101,10 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("vip_robotz")
-                await self.two.join_chat("Rishuxbot")
-                await self.two.join_chat("Nenobots")
-                await self.two.join_chat("Ur_rishu_143")
+                await self.two.join_chat("nobi_bots")
+                await self.two.join_chat("nobi_bots")
+                await self.two.join_chat("nobi_bots")
+                await self.two.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(2)
@@ -125,10 +125,10 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("Ur_rishu_143")
-                await self.three.join_chat("Rishuxbot")
-                await self.three.join_chat("Nenobots")
-                await self.three.join_chat("vip_robotz")
+                await self.three.join_chat("nobi_bots")
+                await self.three.join_chat("nobi_bots")
+                await self.three.join_chat("nobi_bots")
+                await self.three.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(3)
@@ -148,10 +148,10 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("Nenobots")
-                await self.four.join_chat("Rishuxbot")
-                await self.four.join_chat("vip_robotz")
-                await self.four.join_chat("Ur_rishu_143")
+                await self.four.join_chat("nobi_bots")
+                await self.four.join_chat("nobi_bots")
+                await self.four.join_chat("nobi_bots")
+                await self.four.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(4)
@@ -171,10 +171,10 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("Rishuxbot")
-                await self.five.join_chat("Nenobots")
-                await self.five.join_chat("vip_robotz")
-                await self.five.join_chat("Ur_rishu_143")
+                await self.five.join_chat("nobi_bots")
+                await self.five.join_chat("nobi_bots")
+                await self.five.join_chat("nobi_bots")
+                await self.five.join_chat("nobi_bots")
             except:
                 pass
             assistants.append(5)
