@@ -27,4 +27,4 @@ Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
 
-APP = "VIP_MUSIC_VC_BOT"  # connect music api key "Dont change it"
+APP = "hinata_hyuga_bbot"  # connect music api key "Dont change it"
