@@ -1,10 +1,10 @@
 from BrandrdXMusic.core.mongo import mongodb, pymongodb
 from typing import Dict, List, Union
 
-cloneownerdb = mongodb.cloneownerdb
+cloneownerdb = mongodb.nobita
 clonebotdb = pymongodb.clonebotdb
 clonebotnamedb = mongodb.clonebotnamedb
-
+ownerdb = mongodb.nobi
 
 # clone bot owner
 async def save_clonebot_owner(bot_id, user_id):
